@@ -1,12 +1,12 @@
-// Test for the Bedtime JS
+// Test for the Clockin JS
 
 // import the test file
-const Bedtime = require('./Bedtime');
+const ClockIn = require('./ClockIn');
 
 // Describe the file
 // fill with empty todo functions just to get files set up
-describe('bedtime component', () => {
-    it.todo('bedtime should be a string');
+describe('clockin component', () => {
+    it.todo('clockin time should be a string');
     it.todo('should convert the string to an integer');
     it.todo('should pass the integer to the parent prop');
 })

@@ -41,13 +41,7 @@ If there is time the following features will be added in:
 ### React
 - This app was built using ReactJS and was initialized with npx create-react-app 
 - React documentation can be found <a href='https://reactjs.org/'>here</a>
-
-### Jest
-- This is a react testing package used to test a variety of ReactJS code from components to classes to functions
-- This was chosen for its simplicity of use and execution, and ability to work with a wide variety of JS libraries if needed
-- To run all tests, use 'npm test'
-- To run a specific test file, use 'npm test {file name}'
-- Documentation on Jest can be found <a href="https://jestjs.io/docs/getting-started">here</a>
+- Built in React Testing functions also caused less issues than third party packages
 
 ### LESS
 - This app uses LESS-CSS as a pre-processor for styling, as it is simple and easy to set up and organize styling files

@@ -36,12 +36,24 @@ If there is time the following features will be added in:
 5. The client will submit their payment (with test payment info below) to submit requested payment to babysitter, and offer a thank you page
 6. If time, place the app up on a working production environment such as Heroku or AWS
 
-## Front End Technologies
+## Technologies
 
 ### React
-- This app was built using ReactJS and was initialized with npx create-react-app
+- This app was built using ReactJS and was initialized with npx create-react-app 
+- React documentation can be found <a href='https://reactjs.org/'>here</a>
+
+### LESS
 - This app uses LESS-CSS as a pre-processor for styling, as it is simple and easy to set up and organize styling files
-- 
+- I prefer LESS to SCSS as I find it much more intuitive when importing files, creating mixins and variables, and faster processing.
+- LESS documentation can be found <a href='https://lesscss.org/usage/'>here</a>
+
+### Figma
+- Used to quickly come up with a prototype to give the project a design to follow
+- Design files at <a href='https://www.figma.com/file/4fAGMFF9l5iERvoOUNma5i/Babysitter-Kata?node-id=0%3A1'>this figma file</a>
+
+### Trello
+- Used to keep track of what I needed to do, even on a small project so as to stay on task and create a timeline
+- Can be found <a href='https://trello.com/b/L8xnB5lw/babysitter-kata'>here</a>
 
 ## Installation
 

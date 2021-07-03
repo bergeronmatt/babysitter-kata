@@ -4,7 +4,8 @@ This project file is a coding challenge that requires the following from the cha
 
 ```
 ## Background
-This kata simulates a babysitter working and getting paid for one night.  The rules are pretty straight forward.
+This kata simulates a babysitter working and getting paid for one night.  
+The rules are pretty straight forward.
 
 The babysitter:
 - starts no earlier than 5:00PM

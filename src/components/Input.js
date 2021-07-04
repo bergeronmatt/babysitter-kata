@@ -13,6 +13,14 @@ export default function Input({ clockIn, clockOut, bedtime }) {
       clockOut(chosenClockOut);
   })
 
+  const clearTimes = (e) => {
+      e.preventDefault();
+
+      setChosenClockIn('');
+      setChosenBedtime('');
+      setChosenClockOut('');
+  }
+
   return (
     <div className="container">
       <div className="time_form">
@@ -42,7 +50,7 @@ export default function Input({ clockIn, clockOut, bedtime }) {
               onChange={e => setChosenClockOut(e.target.value)}
               value={chosenClockOut}
             />
-            <button type="submit">Calculate Pay</button>
+            <button onClick={clearTimes}>Clear</button>
           </div>
         </form>
       </div>

@@ -70,6 +70,25 @@ Please use the following for downloading and installing this repository:
 - - yarn: 'yarn start'
 - - npm: 'npm start'
 
+## Using the App
+
+### MVP
+
+In order to calulate wages, the baby sitter will input their times to for when they clock in, put the child to bed, and when they clock out.
+The app will automatically calculate and render the wages for the baby sitter when all three times are inputted, otherwise the wages will
+remain at $0.
+
+The app will not allow for partial hours to be calculated, and will round up to the nearest hour for the time keeping components, and 
+calculate a whole dollar amount to be due after the night is complete.
+
+Should the user clock in before the minimum clock in time, and clock out after the mandatory clock out time, the app will automatically 
+render the time to the mandatory times set by the challenge. Should the user put the bedtime value to anytime outside the babysitting
+time frame, or after midnite, the bedtime will automatically be set to midnite.
+
+The user can use the Clear Button to reset all the parameters and start the calculation process again.
+
+### Stretch
+
 ## Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.

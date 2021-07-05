@@ -21,7 +21,7 @@ export default function Main() {
         setBedtime(0);
     }, [])
 
-    console.log('bedtime time: ', bedtime);
+    // console.log('bedtime time: ', bedtime);
 
     return (
         <div className='container background'>
@@ -42,6 +42,11 @@ export default function Main() {
                     bedtimeRate={bedtimeRate}
                     endingRate={endingRate}
                 />
+
+                {/* Streamlined the component functionality 
+                    to require less components for smaller app
+                    size and faster functionality
+                */}
                 {/* Clockin Component */}
                 {/* Clockout Component */}
                 {/* Bedtime Component */}

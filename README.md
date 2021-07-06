@@ -89,6 +89,18 @@ The user can use the Clear Button to reset all the parameters and start the calc
 
 ### Stretch
 
+For the Stretch, I decided to add in some styling, but more importantly, add in some utility to the challenge by giving the app the ability to actually charge a client. The app is connected to a test Stripe account that will process all the payments as a real credit card processor would.
+
+In order for the test payment to work, you will need to <a href="https://github.com/bergeronmatt/babysitter-be">launch the backend</a> with 'node index' so the stripe API will work, then input in all the necessary times as needed to calculate wages, and it will render the amount due.
+
+For the card number enter: 4242 4242 4242 4242
+
+For the expiration, date enter a date that is not the current date.
+
+For the CVC enter any random code.
+
+A successful payment will respond with a thank you message below the Stripe payment form. A failed payment will result in nothing. The payments fully work within Stripe, but that will require access to the account dashboard to see in effect, which can be shown upon request.
+
 ## Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.

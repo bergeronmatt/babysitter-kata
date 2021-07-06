@@ -1,0 +1,67 @@
+.FormGroup {
+  width: 60%;
+  margin: 10px 0;
+  padding: 0;
+  border-style: none;
+  background-color: #ffff;
+  will-change: opacity, transform;
+  border-radius: 4px;
+  align-self: center;
+  border: solid 1px black;
+}
+.FormRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+.stripe-button {
+  display: block;
+  font-size: 16px;
+  width: 60%;
+  height: 40px;
+  margin: 0 0 10px 0;
+  background-color: #000;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  will-change: transform, background-color, box-shadow;
+  border: none;
+  align-self: center;
+}
+.stripe-button:hover {
+  background-color: #868484;
+  border: black solid 1px;
+  color: black;
+  transition-delay: 0.5s;
+}
+.stripe-button:active {
+  background-color: #ffff;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
+  transform: scale(0.99);
+}
+.stripe-button:disabled {
+  background-color: grey;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
+  transform: scale(0.99);
+}
+.App {
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-right: 25%;
+}
+h1,
+h3 {
+  text-align: center;
+}

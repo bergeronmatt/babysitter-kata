@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Input from './Input';
 import Pay from './Pay';
+import StripeContainer from './StripeContainer';
 
 export default function Main() {
 
@@ -21,7 +22,7 @@ export default function Main() {
         setBedtime(0);
     }, [])
 
-    console.log('bedtime time: ', bedtime);
+    // console.log('bedtime time: ', bedtime);
 
     return (
         <div className='container background'>
@@ -42,6 +43,13 @@ export default function Main() {
                     bedtimeRate={bedtimeRate}
                     endingRate={endingRate}
                 />
+                {/* Stretch Stripe Payment Component */}
+                <StripeContainer />
+
+                {/* Streamlined the component functionality 
+                    to require less components for smaller app
+                    size and faster functionality
+                */}
                 {/* Clockin Component */}
                 {/* Clockout Component */}
                 {/* Bedtime Component */}

@@ -5,7 +5,6 @@ export default function Pay(props) {
     // pass props to variables
     // convert strings of time checks into integers for calculation
     let bedtime = parseInt(props.bedtime);
-    console.log('bedtime check: ', bedtime)
     // console.log('bedtime check: ', bedtime)
     let clockIn = parseInt(props.clockIn);
     let clockOut = parseInt(props.clockOut);
@@ -75,16 +74,18 @@ export default function Pay(props) {
     let calculatedWages = startingWages + bedtimeWages + endingWages;
 
     totalWages = (isNaN(calculatedWages) ? 0 : calculatedWages);
+    
+    localStorage.setItem('totalWages', totalWages);
 
-    console.log('starting wages: ', startingWages);
-    console.log('ending wages: ', endingWages);
-    console.log('bedtime wages: ', bedtimeWages);
-    console.log('total wages: ', totalWages);
+    // console.log('starting wages: ', startingWages);
+    // console.log('ending wages: ', endingWages);
+    // console.log('bedtime wages: ', bedtimeWages);
+    // console.log('total wages: ', totalWages);
 
     return (
         <div className='container'>
-            <div class="pay-wrapper">
-                <div class="pay-content">
+            <div className="pay-wrapper">
+                <div className="pay-content">
                     <p>Total Wages</p>
                     <p>${totalWages}</p>
                 </div>

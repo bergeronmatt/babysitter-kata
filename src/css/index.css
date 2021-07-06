@@ -45,6 +45,9 @@
   color: black;
   transition-delay: 0.02s;
 }
+.hidden {
+  display: none;
+}
 * {
   box-sizing: border-box;
 }

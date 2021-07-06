@@ -37,6 +37,9 @@ export default function Stripe() {
     // console.log('wages: ', totalWages); 
 
 
+    // conditional CSS for thank you message
+
+
     // handle payment submission
 
     const handleSubmit = async () => {
@@ -84,6 +87,9 @@ export default function Stripe() {
             <button type='submit' onClick = {() => handleSubmit()} className="stripe-button">
                 Pay ${totalWages}
             </button>
+            <div className={(success ? 'visible' : 'hidden')}>
+              <h1>Thank you for your Payment</h1>
+            </div>
         </div>
     )
 }

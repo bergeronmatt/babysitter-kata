@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { CardElement, Elements, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 
 // stripe card options styling
@@ -24,8 +24,55 @@ const CARD_OPTIONS = {
 export default function Stripe() {
 
     // set the state of the success trigger
-    const [success, setSuccess] = useState('false');
+    const [success, setSuccess] = useState(false);
+
+    // set stripe object
     const stripe = useStripe();
+
+    // set up stripe elements object
+    const elements = useElements();
+
+    // set the wage object to the value stored in localstorage
+    let totalWages = localStorage.getItem('totalWages');
+    // console.log('wages: ', totalWages); 
+
+
+    // handle payment submission
+
+    const handleSubmit = async () => {
+
+      // prevent default component refresh
+      
+
+      // create Stripe Payment Method
+      const {error, paymentMethod} = await stripe.createPaymentMethod({
+        type: 'card',
+        card: elements.getElement(CardElement)
+      })
+
+      // if there is no error in the method creation, post payment to the backend
+      // and set success to true
+      // if there is an error, console log error
+      if(!error){
+        const {id} = paymentMethod;
+        try {
+          const response = await axios.post('http://localhost:4000/api/payment', {
+            amount: (totalWages * 100),
+            id: id,
+          });
+
+          if(response.data.success) {
+            console.log('Successful Payment');
+            setSuccess(true);
+            localStorage.clear();
+          }
+        } catch (error) {
+          console.log('Payment could not be processed.', error);
+        }
+      } else {
+        console.log('Error: ', error.message);
+      }
+    };
 
     return (
         <div className='container'>
@@ -34,8 +81,8 @@ export default function Stripe() {
                     <CardElement options={CARD_OPTIONS} />
                 </div>
             </fieldset>
-            <button type='submit' className="stripe-button">
-                Pay $Total 
+            <button type='submit' onClick = {() => handleSubmit()} className="stripe-button">
+                Pay ${totalWages}
             </button>
         </div>
     )

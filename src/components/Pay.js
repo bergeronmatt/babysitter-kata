@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 export default function Pay(props) {
 
@@ -74,6 +74,8 @@ export default function Pay(props) {
     let calculatedWages = startingWages + bedtimeWages + endingWages;
 
     totalWages = (isNaN(calculatedWages) ? 0 : calculatedWages);
+    
+    localStorage.setItem('totalWages', totalWages);
 
     // console.log('starting wages: ', startingWages);
     // console.log('ending wages: ', endingWages);

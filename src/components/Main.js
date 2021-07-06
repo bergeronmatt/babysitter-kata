@@ -27,7 +27,7 @@ export default function Main() {
     return (
         <div className='container background'>
             <div className="content-wrapper">
-                <p>This is the main component</p>
+                <h1>Please Enter Times</h1>
                 <Input 
                     // create props that will be passed back up from child to parent
                     clockIn={chosenClockIn => setClockIn(chosenClockIn)}

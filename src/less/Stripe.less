@@ -1,1 +1,55 @@
-@import "Stripe";
+.FormGroup {
+	width: 60%;
+	margin: 10px 0;
+	padding: 0;
+	border-style: none;
+	background-color: #ffff;
+	will-change: opacity, transform;
+	border-radius: 4px;
+	align-self: center;
+	border: solid 1px black;
+
+}
+
+.FormRow {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-left: 15px;
+}
+
+.StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+
+.StripeElement {
+	width: 100%;
+	padding: 11px 15px 11px 0;
+	
+}
+
+.stripe-button {
+	display: block;
+	font-size: 16px;
+	width: 60%;
+	height: 40px;
+	margin: 0 0 10px 0;
+	background-color: #000;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 100ms ease-in-out;
+	will-change: transform, background-color, box-shadow;
+	border: none;
+	align-self: center;
+	&:hover {
+		background-color: white;
+		border: black solid 1px;
+		color: black;
+		transition-delay: .02s;
+	}
+}
+
+

@@ -26,7 +26,7 @@ export default function Input({ clockIn, clockOut, bedtime }) {
       <div className="time_form">
         <form className="form">
           <div className="clockIn">
-            <label>Clock In</label>
+            <label><p>Clock In</p></label>
             <input
               id="clockIn"
               type="time"
@@ -34,7 +34,7 @@ export default function Input({ clockIn, clockOut, bedtime }) {
               onChange={e => setChosenClockIn(e.target.value)}
               value={chosenClockIn}
             />
-            <label>Bedtime</label>
+            <label><p>Bedtime</p></label>
             <input
               id="bedtime"
               type="time"
@@ -42,7 +42,7 @@ export default function Input({ clockIn, clockOut, bedtime }) {
               onChange={e => setChosenBedtime(e.target.value)}
               value={chosenBedtime}
             />
-            <label>Clock Out</label>
+            <label><p>Clock Out</p></label>
             <input
               id="clockOut"
               type="time"
@@ -50,8 +50,8 @@ export default function Input({ clockIn, clockOut, bedtime }) {
               onChange={e => setChosenClockOut(e.target.value)}
               value={chosenClockOut}
             />
-            <button onClick={clearTimes}>Clear</button>
           </div>
+          <button className='clear_btn' onClick={clearTimes}>Clear</button>
         </form>
       </div>
     </div>

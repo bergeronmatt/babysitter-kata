@@ -30,7 +30,6 @@
   height: 40px;
   margin: 0 0 10px 0;
   background-color: #000;
-  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;
   border-radius: 4px;
   color: #fff;
   font-weight: 600;
@@ -41,27 +40,92 @@
   align-self: center;
 }
 .stripe-button:hover {
-  background-color: #868484;
+  background-color: white;
   border: black solid 1px;
   color: black;
-  transition-delay: 0.5s;
+  transition-delay: 0.02s;
 }
-.stripe-button:active {
-  background-color: #ffff;
-  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
-  transform: scale(0.99);
+* {
+  box-sizing: border-box;
 }
-.stripe-button:disabled {
-  background-color: grey;
-  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
-  transform: scale(0.99);
-}
-.App {
-  margin-left: 25%;
-  margin-top: 5%;
-  margin-right: 25%;
+html {
+  font-size: 75%;
 }
 h1,
-h3 {
-  text-align: center;
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Roboto Slab", sans-serif;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+}
+.content-wrapper {
+  margin: auto;
+  margin-top: 20vh;
+  width: 60%;
+  padding: auto;
+  background-color: #C3C3FD;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.time_form {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+  height: auto;
+  width: 100%;
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding: auto;
+  width: 100%;
+}
+.clockIn {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-content: center;
+  width: 75%;
+  height: 35px;
+  margin: auto;
+  padding: auto;
+}
+label {
+  line-height: 10%;
+  margin: auto;
+  margin-right: 5%;
+  padding: auto;
+  font-size: 16px;
+}
+input {
+  width: 100px;
+  margin: auto;
+  padding: auto;
+}
+.clear_btn {
+  width: 100px;
+  height: 35px;
+  padding: auto;
+  margin: auto;
+  margin-top: 10px;
+}
+.pay-content p {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
